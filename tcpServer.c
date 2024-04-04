@@ -39,7 +39,7 @@ int * establishConnectionsFromExternalProcesses()
         printf("Error while creating socket\n");
         exit(0);
     }
-    
+     printf("Socket created successfully\n");
     
     // Set port and IP:
     server_addr.sin_family = AF_INET;
@@ -51,14 +51,14 @@ int * establishConnectionsFromExternalProcesses()
         printf("Couldn't bind to the port\n");
         exit(0);
     }
-    
+    printf("Done with binding\n");
     
     // Listen for clients:
     if(listen(socket_desc, 1) < 0){
         printf("Error while listening\n");
         exit(0);
     }
-    
+    printf("\n\nListening for incoming connections.....\n\n");
 
     printf("-------------------- Initial connections ---------------------------------\n");
 
