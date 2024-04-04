@@ -92,7 +92,7 @@ int * establishConnectionsFromExternalProcesses()
 int main(void)
 {
     int *client_socket = establishConnectionsFromExternalProcesses(); 
-    
+    int socket_desc;
     struct msg messageFromClient;   
     int iteration = 0;
 
